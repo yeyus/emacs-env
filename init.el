@@ -1,5 +1,5 @@
 ;; Add local .emacs.d folder to the load-path
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/add-ons/")
 
 ;; Show line numbers always
 (global-linum-mode t)
@@ -33,3 +33,21 @@
 
 ;; Remove whitespaces on save
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(inhibit-startup-screen t)
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; Enable NeoTree
+(add-to-list 'load-path "~/.emacs.d/neotree")
+(require 'neotree)
+(global-set-key (kbd "C-`") 'neotree-toggle)
